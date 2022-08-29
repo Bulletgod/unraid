@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>EmbyServer</Name>
+  <Repository>docker2021q/embyserver</Repository>
+  <Registry>https://registry.hub.docker.com/r/emby/embyserver/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://lime-technology.com/forum/index.php?topic=45444.0</Support>
+  <Project/>
+  <Overview>&#xD;
+    Emby Server is a home media server built on top of other popular open source technologies such as Service Stack, jQuery, jQuery mobile, and Mono. Bringing together movies, music, television and more in one dazzling interface.[br][br]&#xD;
+    [b][span style='color: #E80000;']Directories:[/span][/b][br]&#xD;
+    [b]/config[/b] : this path is used to store Emby's configuration.[br]&#xD;
+    [b]/mnt[/b] : this path is used to add library locations to Emby.[br]&#xD;
+  </Overview>
+  <Category>MediaServer:Video MediaServer:Music MediaServer:Photos</Category>
+  <WebUI>http://[IP]:[PORT:9096]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/MediaBrowser/Emby.Build/master/unraid-templates/emby/EmbyServer.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/MediaBrowser/Emby.Resources/master/images/Logos/logoicon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1652595586</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>&#xD;
+    Emby Server is a home media server built on top of other popular open source technologies such as Service Stack, jQuery, jQuery mobile, and Mono. Bringing together movies, music, television and more in one dazzling interface.[br][br]&#xD;
+    [b][span style='color: #E80000;']Directories:[/span][/b][br]&#xD;
+    [b]/config[/b] : this path is used to store Emby's configuration.[br]&#xD;
+    [b]/mnt[/b] : this path is used to add library locations to Emby.[br]&#xD;
+  </Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9096</HostPort>
+        <ContainerPort>8096</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>9920</HostPort>
+        <ContainerPort>8920</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>2900</HostPort>
+        <ContainerPort>1900</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8359</HostPort>
+        <ContainerPort>7359</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/Movie/</HostDir>
+      <ContainerDir>/mnt</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/Download/ZL/</HostDir>
+      <ContainerDir>/mnt/Download</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/Download/</HostDir>
+      <ContainerDir>/mnt/xjj</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/Download/</HostDir>
+      <ContainerDir>/mnt/pt</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/EmbyServer</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>2</Value>
+      <Name>UID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>2</Value>
+      <Name>GID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>2</Value>
+      <Name>GIDLIST</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Host Path 2" Target="/mnt" Default="/mnt" Mode="rw" Description="Container Path: /mnt" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Movie/</Config>
+  <Config Name="Key 1" Target="UID" Default="2" Mode="" Description="Container Variable: UID" Type="Variable" Display="always" Required="false" Mask="false">2</Config>
+  <Config Name="Key 2" Target="GID" Default="2" Mode="" Description="Container Variable: GID" Type="Variable" Display="always" Required="false" Mask="false">2</Config>
+  <Config Name="Key 3" Target="GIDLIST" Default="2" Mode="" Description="Container Variable: GIDLIST" Type="Variable" Display="always" Required="false" Mask="false">2</Config>
+  <Config Name="Host Device 1" Target="" Default="" Mode="" Description="&#x5BB9;&#x5668; Device: " Type="Device" Display="always" Required="false" Mask="false">/dev/dri</Config>
+  <Config Name="webui" Target="8096" Default="8096" Mode="tcp" Description="&#x5BB9;&#x5668; Port: 8096" Type="Port" Display="always" Required="false" Mask="false">9096</Config>
+  <Config Name="webuis" Target="8920" Default="8920" Mode="tcp" Description="&#x5BB9;&#x5668; Port: 8920" Type="Port" Display="always" Required="false" Mask="false">9920</Config>
+  <Config Name="udp1900" Target="1900" Default="1900" Mode="udp" Description="&#x5BB9;&#x5668; Port: 1900" Type="Port" Display="always" Required="false" Mask="false">2900</Config>
+  <Config Name="udp7359" Target="7359" Default="7359" Mode="udp" Description="&#x5BB9;&#x5668; Port: 7359" Type="Port" Display="always" Required="false" Mask="false">8359</Config>
+  <Config Name="Host Path 2" Target="/mnt/Download" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /mnt" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Download/ZL/</Config>
+  <Config Name="Host Path 3" Target="/mnt/xjj" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /mnt/xjj" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Download/</Config>
+  <Config Name="Host Path 4" Target="/mnt/pt" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /mnt/pt" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Download/</Config>
+  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/EmbyServer" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/EmbyServer</Config>
+</Container>

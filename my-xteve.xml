@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>xteve</Name>
+  <Repository>bl0m1/xtevedocker:latest</Repository>
+  <Registry>https://registry.hub.docker.com/r/bl0m1/xtevedocker</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview>xTeVe is a M3U proxy server for Plex, Emby and any client and provider which supports the .TS and .M3U8 (HLS) streaming formats.&#xD;
+&#xD;
+Image Maintainer: LeeD &#xD;
+&#xD;
+For support come visit us at our xTeVe Discord channel: https://discord.gg/eWYquha&#xD;
+&#xD;
+For config, visit dockerhub link&#xD;
+&#xD;
+i just provided the template for unraid, for support see upper note</Overview>
+  <Category>Downloaders: MediaServer:Video Network:Proxy</Category>
+  <WebUI>http://[IP]:[PORT:34400]/web/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/alturismo/unraid_templates/master/my-dnsforge_xteve.xml</TemplateURL>
+  <Icon>https://avatars0.githubusercontent.com/u/53275662?s=460&amp;amp;v=4</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1629128341</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>docker run -it -d &#xD;
+--name=xteve &#xD;
+-p 34400:34400 &#xD;
+-v ~/xteve_home:/home/xteve/.xteve &#xD;
+bl0m1/xtevedocker:latest</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>34400</HostPort>
+        <ContainerPort>34400</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/xteve/</HostDir>
+      <ContainerDir>/home/xteve/.xteve</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="XTEVE_CONF" Target="/home/xteve/.xteve" Default="" Mode="rw" Description="Container Path: /home/xteve/.xteve" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/xteve/</Config>
+  <Config Name="Host Port 1" Target="34400" Default="34400" Mode="tcp" Description="&#x5BB9;&#x5668; Port: 34400" Type="Port" Display="always" Required="false" Mask="false">34400</Config>
+  <Config Name="XTEVE_CONF" Target="/home/xteve/conf" Default="" Mode="rw" Description="Container Path: /home/xteve/conf" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/xteve/</Config>
+  <Config Name="GUIDE2GO_CONF" Target="/home/xteve/guide2go/conf" Default="" Mode="rw" Description="Container Path: /home/xteve/guide2go/conf" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/xteve/guide2go/</Config>
+  <Config Name="Timezone" Target="TZ" Default="" Mode="" Description="Container Variable: TZ" Type="Variable" Display="always" Required="false" Mask="false">Europe/London</Config>
+  <Config Name="XTEVE_PORT" Target="XTEVE_PORT" Default="" Mode="" Description="Container Variable: XTEVE_PORT" Type="Variable" Display="always" Required="false" Mask="false">34400</Config>
+  <Config Name="XTEVE_BRANCH" Target="XTEVE_BRANCH" Default="" Mode="" Description="Container Variable: XTEVE_BRANCH" Type="Variable" Display="always" Required="false" Mask="false">master</Config>
+  <Config Name="XTEVE_DEBUG" Target="XTEVE_DEBUG" Default="0" Mode="" Description="Container Variable: XTEVE_DEBUG" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="XTEVE_API" Target="XTEVE_API" Default="" Mode="" Description="Container Variable: XTEVE_API" Type="Variable" Display="always" Required="false" Mask="false">1</Config>
+</Container>

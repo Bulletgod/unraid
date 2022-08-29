@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>baota</Name>
+  <Repository>pch18/baota:clear</Repository>
+  <Registry>https://registry.hub.docker.com/r/pch18/baota</Registry>
+  <Network>br0</Network>
+  <MyIP>192.168.10.100</MyIP>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI>http://192.168.10.100:8888</WebUI>
+  <TemplateURL/>
+  <Icon>https://avatars.githubusercontent.com/u/83668321?v=4</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1630398119</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>br0</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/baota</HostDir>
+      <ContainerDir>/www</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/baota/wwwroot</HostDir>
+      <ContainerDir>/wwwroot</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="www" Target="/www" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /other" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/baota</Config>
+  <Config Name="wwwroot" Target="/wwwroot" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /wwwroot" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/baota/wwwroot</Config>
+</Container>

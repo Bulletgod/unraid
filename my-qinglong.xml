@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>qinglong</Name>
+  <Repository>whyour/qinglong:2.10.11</Repository>
+  <Registry>https://hub.docker.com/r/whyour/qinglong</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://hub.docker.com/r/drewnb/qinglong/</Project>
+  <Overview>&#x5DF2;&#x96C6;&#x6210;&#x9752;&#x9F99;&#x548C;&#x82B1;&#x8BED;2.0.3&#x7684;&#x53CA;bot&#x6240;&#x6709;&#x529F;&#x80FD;&#x3002;(&#x6CE8;&#x610F;&#x7248;&#x672C;&#xFF09;2.2-jdc&#x4E3A;&#x9752;&#x9F99;2.2&#x9501;&#x5B9A;&#x7248; &#xFF0C;&#x5B9E;&#x73B0;&#x4E86;jdc&#x968F;&#x5BB9;&#x5668;&#x4E00;&#x8D77;&#x542F;&#x52A8;&#x3002;2.2-jdc-bot,&#x5B9E;&#x73B0;&#x4E86;jdc&#x53CA;bot&#x968F;&#x5BB9;&#x5668;&#x4E00;&#x8D77;&#x542F;&#x52A8;&#x3002; &#xD;
+https://hub.docker.com/r/drewnb/qinglong/</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:5700]/</WebUI>
+  <TemplateURL/>
+  <Icon>http://192.168.10.254:4700/images/qinglong.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1647926416</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>&#x5DF2;&#x96C6;&#x6210;&#x9752;&#x9F99;&#x548C;&#x82B1;&#x8BED;2.0.3&#x7684;&#x53CA;bot&#x6240;&#x6709;&#x529F;&#x80FD;&#x3002;(&#x6CE8;&#x610F;&#x7248;&#x672C;&#xFF09;2.2-jdc&#x4E3A;&#x9752;&#x9F99;2.2&#x9501;&#x5B9A;&#x7248; &#xFF0C;&#x5B9E;&#x73B0;&#x4E86;jdc&#x968F;&#x5BB9;&#x5668;&#x4E00;&#x8D77;&#x542F;&#x52A8;&#x3002;2.2-jdc-bot,&#x5B9E;&#x73B0;&#x4E86;jdc&#x53CA;bot&#x968F;&#x5BB9;&#x5668;&#x4E00;&#x8D77;&#x542F;&#x52A8;&#x3002; &#xD;
+https://hub.docker.com/r/drewnb/qinglong/</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>4700</HostPort>
+        <ContainerPort>5700</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/qinglong/config/</HostDir>
+      <ContainerDir>/ql/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/qinglong/log/</HostDir>
+      <ContainerDir>/ql/log</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/qinglong/scripts/</HostDir>
+      <ContainerDir>/ql/scripts</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/qinglong/repo</HostDir>
+      <ContainerDir>/ql/repo</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/qinglong/db</HostDir>
+      <ContainerDir>/ql/db</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/qinglong/public/</HostDir>
+      <ContainerDir>/ql/public</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/qinglong/xdd/</HostDir>
+      <ContainerDir>/ql/xdd</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Host Path 1" Target="/ql/config" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /ql/config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/qinglong/config/</Config>
+  <Config Name="Host Path 2" Target="/ql/log" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /ql/log" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/qinglong/log/</Config>
+  <Config Name="Host Path 3" Target="/ql/scripts" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /ql/scripts" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/qinglong/scripts/</Config>
+  <Config Name="Host Path 4" Target="/ql/repo" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /ql/repo " Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/qinglong/repo</Config>
+  <Config Name="Host Path 5" Target="/ql/db" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /ql/db" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/qinglong/db</Config>
+  <Config Name="Host Path 7" Target="/ql/public" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: " Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/qinglong/public/</Config>
+  <Config Name="Host Port 1" Target="5700" Default="" Mode="tcp" Description="&#x5BB9;&#x5668; Port: 5700" Type="Port" Display="always" Required="false" Mask="false">4700</Config>
+  <Config Name="Host Path 8" Target="/ql/xdd" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /ql/xdd" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/qinglong/xdd/</Config>
+</Container>

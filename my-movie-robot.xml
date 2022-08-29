@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>movie-robot</Name>
+  <Repository>yipengfei/movie-robot</Repository>
+  <Registry>https://registry.hub.docker.com/r/yipengfei/movie-robot/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>true</Privileged>
+  <Support/>
+  <Project/>
+  <Overview>https://registry.hub.docker.com/r/yipengfei/movie-robot/</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:1329]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://notion-emojis.s3-us-west-2.amazonaws.com/prod/svg-twitter/1f3ac.svg</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1652104453</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>https://registry.hub.docker.com/r/yipengfei/movie-robot/</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>1329</HostPort>
+        <ContainerPort>1329</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/movie-robot</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/Movie/</HostDir>
+      <ContainerDir>/video</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>3vQyOplktqcDT1x9bIOphssJrtcXQResrxuaKSYlFVhPDv5ftN7DTdMEIZrWaEerNZ1Vr2xSgOuDAWidGF3uQDXvsGXDtmFcjWtpMKfHeRAnkoghThDywZW2RreeBWBE</Value>
+      <Name>LICENSE_KEY</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="webui" Target="1329" Default="1329" Mode="tcp" Description="&#x5BB9;&#x5668; Port: 1329" Type="Port" Display="always" Required="false" Mask="false">1329</Config>
+  <Config Name="data" Target="/data" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/movie-robot</Config>
+  <Config Name="video" Target="/video" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /video" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Movie/</Config>
+  <Config Name="&#x6FC0;&#x6D3B;&#x7801;" Target="LICENSE_KEY" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: LICENSE_KEY" Type="Variable" Display="always" Required="false" Mask="false">3vQyOplktqcDT1x9bIOphssJrtcXQResrxuaKSYlFVhPDv5ftN7DTdMEIZrWaEerNZ1Vr2xSgOuDAWidGF3uQDXvsGXDtmFcjWtpMKfHeRAnkoghThDywZW2RreeBWBE</Config>
+</Container>
